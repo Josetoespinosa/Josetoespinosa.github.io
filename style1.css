@@ -1,0 +1,15 @@
+.segundo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.primero{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.td,tr{
+    border: 1px, solid;
+}
+
+.head{
+    color:aqua;
+}

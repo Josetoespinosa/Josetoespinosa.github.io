@@ -1,14 +1,98 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylessheet" type="text/css" href="style1.css"></link>
+        <style>
+            .segundo{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                }
+
+            .primero{
+                 font-family: 'Times New Roman', Times, serif;
+                }
+
+            td,tr{
+                border: 1px solid;
+            }
+
+            h1{
+                color:rgb(144, 27, 123);
+            }
+        </style>
         <title>Lab 1</title>
         <h1>Laboratorio 1:</h1>
         <h2>-Jose Tomas Espinosa</h2>
-        <h2>-21046360-7</h2>
+        <h2 id="mirut">-21046360-7</h2>
     </head>
     <body>
-        <p>     Im studing Software Engineer at the Universidad de los Andes, </p>
-        <p> currently im at fourth year. You can get into my github account if </p>
-        <p><a href="https://github.com/Josetoespinosa"> you click here</a>.</p>
+        <p class ="primer">     Im studing Software Engineer at the Universidad de los Andes, </p>
+        <p class ="primer"> currently im at fourth year. You can get into my github account if </p>
+        <p class ="primer"><a href="https://github.com/Josetoespinosa"> you click here</a> .</p>
+        <p></p>
+        <p class ="segundo">     Im from Curico, a city two hours south of Santiago. I studied at</p>
+        <p class ="segundo"> Lycee Jean Mermoz, a french school so i can speak 3 languages. Right</p>
+        <p class ="segundo"> now im leaving on my own, cause may family still lives in Curico.</p>
+        <p></p>
+        <p class ="segundo"> Here is my knowledge in most of programming languages: </p>
+        <p></p>
+        <table>
+            <tr>
+                <td>Skills</td>
+                <td>Level</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Medium</td>
+            </tr>
+            <tr>
+                <td>Javascript</td>
+                <td>Basic</td>
+            </tr>
+            <tr>
+                <td>HTML/CSS</td>
+                <td>Basic</td>
+            </tr>
+            <tr>
+                <td>HTML/CSS</td>
+                <td>Basic</td>
+            </tr>
+            <tr>
+                <td>Git</td>
+                <td>Basic</td>
+            </tr>
+            <tr>
+                <td>Excel</td>
+                <td>Medium</td>
+            </tr>
+            <tr>
+                <td>SQL</td>
+                <td>Medium</td>
+            </tr>
+            <tr>
+                <td>Ruby</td>
+                <td>Null</td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>Advanced</td>
+            </tr>
+            <tr>
+                <td>Spanish</td>
+                <td>Native</td>
+            </tr>
+        </table>
+        <p></p>
+        <button id="Boton">Ingrese su rut</button>
+        <input type="text" id="rut">
+        
+        <script>
+            var boton = document.getElementById("Boton");
+            var rut = document.getElementById("rut");
+            var mr = document.getElementById("mirut");
+            boton.addEventListener("click", function(){
+                var ms = rut.value;
+                mr.textContent(ms);
+            })
+        </script>
     </body>
 </html>
