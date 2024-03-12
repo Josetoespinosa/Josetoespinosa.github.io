@@ -5,6 +5,7 @@
         <style>
             .segundo{
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                background-color: darkcyan;
                 }
 
             .primero{
@@ -18,9 +19,14 @@
             h1{
                 color:rgb(144, 27, 123);
             }
+
+            .primerlugar{
+                background-color: brown;
+            }
+
         </style>
         <title>Lab 1</title>
-        <h1>Laboratorio 1:</h1>
+        <h1>Laboratory 1:</h1>
         <h2>-Jose Tomas Espinosa</h2>
         <h2 id="mirut">-21046360-7</h2>
     </head>
@@ -36,7 +42,7 @@
         <p class ="segundo"> Here is my knowledge in most of programming languages: </p>
         <p></p>
         <table>
-            <tr>
+            <tr class="primerlugar">
                 <td>Skills</td>
                 <td>Level</td>
             </tr>
@@ -85,14 +91,15 @@
         <button id="Boton">Ingrese su rut</button>
         <input type="text" id="rut">
         
-        <script>
-            var boton = document.getElementById("Boton");
-            var rut = document.getElementById("rut");
-            var mr = document.getElementById("mirut");
-            boton.addEventListener("click", function(){
-                var ms = rut.value;
-                mr.textContent(ms);
-            })
-        </script>
+        
     </body>
+    <script>
+        var boton = document.getElementById("Boton");
+        var rut = document.getElementById("rut");
+        var mr = document.getElementById("mirut");
+        boton.addEventListener("click", function(){
+            var ms = rut.value;
+            mr.textContent = "-"+ms;
+        })
+    </script>
 </html>
