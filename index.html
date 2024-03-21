@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylessheet" type="text/css" href="style1.css"></link>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <style>
             .segundo{
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                 background-color: darkcyan;
                 }
 
-            .primero{
+            .primer{
                  font-family: 'Times New Roman', Times, serif;
                 }
 
@@ -25,12 +25,27 @@
             }
 
         </style>
-        <title>Lab 1</title>
-        <h1>Laboratory 1:</h1>
-        <h2>-Jose Tomas Espinosa</h2>
-        <h2 id="mirut">-21046360-7</h2>
+        <div class="container-sm">
+            <h1>Laboratory 2:  <span class = "badge text-bg-secondary">NEW!</span></h1>
+            <title>Lab 1</title>
+            <div class = "container text-center">
+                <div class = "row align-items-start">
+                    <div class = "col">Name</div>
+                    <div class = "col">Rut</div>
+
+                </div>
+            </div>
+            <div class = "container text-center">
+                <div class = "row align-items-center">
+                    <div class = "col">Jose Tomas Espinosa</div>
+                    <div class = "col" id = "mirut">21046360-7</div>
+
+                </div>
+            </div>
+        </div>
     </head>
     <body>
+        <div class="container-sm">
         <p class ="primer">     Im studing Software Engineer at the Universidad de los Andes, </p>
         <p class ="primer"> currently im at fourth year. You can get into my github account if </p>
         <p class ="primer"><a href="https://github.com/Josetoespinosa"> you click here</a> .</p>
@@ -41,6 +56,10 @@
         <p></p>
         <p class ="segundo"> Here is my knowledge in most of programming languages: </p>
         <p></p>
+        <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Very Good!" data-bs-content="Web Technologies is quite amuzing as far">How is this subject doing so far?</button>
+        <p></p>
+    
+        
         <table>
             <tr class="primerlugar">
                 <td>Skills</td>
@@ -88,10 +107,15 @@
             </tr>
         </table>
         <p></p>
-        <button id="Boton">Ingrese su rut</button>
+        <button type="button" class="btn btn-primary" id="Boton">Ingrese su rut</button>
         <input type="text" id="rut">
         
         
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
     </body>
     <script>
         var boton = document.getElementById("Boton");
@@ -99,7 +123,9 @@
         var mr = document.getElementById("mirut");
         boton.addEventListener("click", function(){
             var ms = rut.value;
-            mr.textContent = "-"+ms;
+            mr.textContent = ms;
         })
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
     </script>
 </html>
